@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCO Cycling - Premium Bicycles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <h1 class="logo">CCO Cycling</h1>
+            <!-- Optional: Add navigation links here if needed -->
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h2>Discover Your Universe on Two Wheels</h2>
+                <p>Premium bikes engineered for the ultimate ride.</p>
+                <!-- Updated CTA Link to open Chatbase -->
+                <a href="javascript:void(0);"
+                   onclick="if(window.chatbase && typeof window.chatbase.openChat === 'function') { window.chatbase.openChat(); } else { console.error('Chatbase not loaded or openChat function not available.'); } return false;"
+                   class="cta-button">
+                   LET CYCLOBOT GUIDE YOU
+                </a>
+            </div>
+        </section>
+
+        <!-- Bikes Section -->
+        <section id="bikes" class="bikes-section">
+            <div class="container">
+                <h2>Our Fleet</h2>
+                <div class="bike-grid">
+                    <!-- Bike Card 1: Nebula Cruiser (City/Comfort) -->
+                    <div class="bike-card">
+                        <div class="bike-icon-container">
+                            <!-- Simple City/Cruiser Icon -->
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="bike-icon">
+                                <circle cx="30" cy="70" r="15" stroke-width="3" />
+                                <circle cx="70" cy="70" r="15" stroke-width="3" />
+                                <line x1="30" y1="70" x2="50" y2="40" stroke-width="3" />
+                                <line x1="70" y1="70" x2="50" y2="40" stroke-width="3" />
+                                <line x1="50" y1="40" x2="70" y2="40" stroke-width="3" />
+                                <line x1="70" y1="40" x2="75" y2="30" stroke-width="3" /> <!-- Handlebars -->
+                                <line x1="30" y1="70" x2="20" y2="50" stroke-width="3" /> <!-- Rear frame -->
+                                <line x1="20" y1="50" x2="55" y2="50" stroke-width="3" /> <!-- Top tube -->
+                                <line x1="55" y1="50" x2="70" y2="70" stroke-width="3" /> <!-- Down tube -->
+                                <line x1="55" y1="50" x2="50" y2="40" stroke-width="3" /> <!-- Seat tube -->
+                            </svg>
+                        </div>
+                        <h3>Nebula Cruiser</h3>
+                        <p>Explore the city in stellar comfort and style.</p>
+                    </div>
+                    <!-- Bike Card 2: Galaxy Racer (Speed/Road) -->
+                    <div class="bike-card">
+                        <div class="bike-icon-container">
+                             <!-- Simple Racer Icon -->
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="bike-icon">
+                                <circle cx="30" cy="70" r="12" stroke-width="3" />
+                                <circle cx="75" cy="70" r="12" stroke-width="3" />
+                                <line x1="30" y1="70" x2="50" y2="40" stroke-width="3" />
+                                <line x1="75" y1="70" x2="50" y2="40" stroke-width="3" />
+                                <line x1="50" y1="40" x2="65" y2="40" stroke-width="3" />
+                                <line x1="65" y1="40" x2="70" y2="30" stroke-width="3" /> <!-- Drop Handlebars -->
+                                <line x1="65" y1="40" x2="60" y2="30" stroke-width="3" /> <!-- Drop Handlebars -->
+                                <line x1="30" y1="70" x2="40" y2="45" stroke-width="3" /> <!-- Rear frame -->
+                                <line x1="40" y1="45" x2="65" y2="40" stroke-width="3" /> <!-- Top tube -->
+                                <line x1="40" y1="45" x2="75" y2="70" stroke-width="3" /> <!-- Down tube -->
+                                <line x1="40" y1="45" x2="50" y2="40" stroke-width="3" /> <!-- Seat tube -->
+                            </svg>
+                        </div>
+                        <h3>Galaxy Racer</h3>
+                        <p>Experience speed redefined, light years ahead.</p>
+                    </div>
+                    <!-- Bike Card 3: Cosmic Trail (Adventure/Mountain) -->
+                    <div class="bike-card">
+                         <div class="bike-icon-container">
+                            <!-- Simple Trail/MTB Icon -->
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="bike-icon">
+                                <circle cx="25" cy="70" r="18" stroke-width="3" /> <!-- Thicker wheels -->
+                                <circle cx="75" cy="70" r="18" stroke-width="3" />
+                                <line x1="25" y1="70" x2="50" y2="35" stroke-width="3" />
+                                <line x1="75" y1="70" x2="50" y2="35" stroke-width="3" />
+                                <line x1="50" y1="35" x2="65" y2="35" stroke-width="3" />
+                                <line x1="65" y1="35" x2="75" y2="35" stroke-width="4" /> <!-- Straight Handlebars -->
+                                <line x1="25" y1="70" x2="35" y2="45" stroke-width="3" /> <!-- Rear frame -->
+                                <line x1="35" y1="45" x2="65" y2="35" stroke-width="3" /> <!-- Top tube -->
+                                <line x1="35" y1="45" x2="75" y2="70" stroke-width="3" /> <!-- Down tube -->
+                                <line x1="35" y1="45" x2="50" y2="35" stroke-width="3" /> <!-- Seat tube -->
+                            </svg>
+                        </div>
+                        <h3>Cosmic Trail</h3>
+                        <p>Conquer any terrain the universe throws at you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2>Stellar Services</h2>
+                <p>From expert tuning and custom builds to cosmic care plans, we keep your ride in peak condition.</p>
+                <ul>
+                    <li>Precision Tune-ups</li>
+                    <li>Custom Bike Fitting</li>
+                    <li>Component Upgrades</li>
+                    <li>AI-Powered Maintenance Reminders (Coming Soon!)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About CCO Cycling</h2>
+                <p>We are pioneers at the intersection of high-performance cycling and artificial intelligence. CCO Cycling is dedicated to providing cyclists with premium machines and an unparalleled purchasing experience, enhanced by our AI assistant, CycloBot.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 CCO Cycling. All rights reserved.</p>
+            <p>An Academic Project Exploring AI in E-commerce.</p>
+        </div>
+    </footer>
+
+    <!-- Link to JavaScript File -->
+    <script src="script.js"></script>
+
+    <!-- Chatbase Embed Script -->
+    <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="r-9LlqBwiqbt7yKqDzm1B";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+</body>
+</html>

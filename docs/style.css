@@ -1,0 +1,357 @@
+/* --- Variables and Basic Setup --- */
+:root {
+    --primary-bg: #0a0f1a; /* Deep space blue/black */
+    --secondary-bg: #16213e; /* Slightly lighter blue */
+    --accent-color: #00ffff; /* Neon Cyan */
+    --text-color: #e0e0e0; /* Light grey/white */
+    --heading-font: 'Orbitron', sans-serif;
+    --body-font: 'Montserrat', sans-serif;
+    --glow-color: rgba(0, 255, 255, 0.7);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px var(--glow-color);
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: #fff;
+    text-shadow: 0 0 8px var(--glow-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* --- Header --- */
+.site-header {
+    background-color: var(--secondary-bg);
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--accent-color);
+    box-shadow: 0 2px 10px var(--glow-color);
+}
+
+.site-header .logo {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* --- Sections --- */
+section {
+    padding: 3rem 0;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background: linear-gradient(rgba(10, 15, 26, 0.8), rgba(10, 15, 26, 0.8)), url('https://via.placeholder.com/1200x600/0a0f1a/16213e?text=Cosmic+Background') no-repeat center center/cover; /* Placeholder background */
+    text-align: center;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 5px;
+    font-family: var(--heading-font);
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 10px var(--glow-color);
+}
+
+.cta-button:hover, .cta-button:focus {
+    background-color: #fff;
+    color: var(--secondary-bg);
+    box-shadow: 0 0 20px var(--glow-color), 0 0 30px var(--accent-color);
+    transform: translateY(-2px);
+    text-shadow: none;
+}
+
+/* --- Bikes Section --- */
+.bikes-section {
+    background-color: var(--secondary-bg);
+}
+
+.bike-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: single column */
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.bike-card {
+    background-color: var(--primary-bg);
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Use flexbox for better alignment */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.bike-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px var(--glow-color);
+}
+
+/* Container for the SVG icon */
+.bike-icon-container {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    margin-bottom: 1.5rem; /* Space below icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the SVG icons */
+.bike-icon {
+    width: 100%;
+    height: 100%;
+    fill: none; /* No fill for line-drawn icons */
+    stroke: var(--accent-color); /* Neon cyan lines */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: filter 0.3s ease; /* Transition for the glow effect */
+}
+
+/* Glowing hover effect for the icon */
+.bike-card:hover .bike-icon {
+   filter: drop-shadow(0 0 8px var(--glow-color));
+}
+
+.bike-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.bike-card p {
+    margin-bottom: 0; /* Remove bottom margin if it's the last element */
+    flex-grow: 1; /* Allow text to take up space if needed */
+}
+
+.bikes-section > .container > p { /* Targeting the "Need help choosing?" paragraph */
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+
+/* --- Services Section --- */
+.services-section ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.services-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- About Section --- */
+.about-section {
+    background-color: var(--secondary-bg);
+}
+
+/* --- Footer --- */
+.site-footer {
+    background-color: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--accent-color);
+}
+
+.site-footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Chatbot Styling --- */
+.chat-toggle-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--glow-color);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-toggle-button:hover, .chat-toggle-button:focus {
+    background-color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 0 25px var(--glow-color);
+}
+
+.chatbot-modal {
+    position: fixed;
+    bottom: 90px; /* Position above the toggle button */
+    right: 20px;
+    width: 90%;
+    max-width: 380px;
+    height: 70vh;
+    max-height: 500px;
+    background-color: var(--secondary-bg);
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 255, 255, 0.4);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevents content spill */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none; /* Initially not interactive */
+}
+
+.chatbot-modal:not([hidden]) {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; /* Enable interaction when visible */
+}
+
+
+.chatbot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    background-color: var(--primary-bg);
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.chatbot-title {
+    font-family: var(--heading-font);
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
+
+.close-chat-button {
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 0.5rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.close-chat-button:hover, .close-chat-button:focus {
+    color: #fff;
+    text-shadow: 0 0 8px var(--glow-color);
+}
+
+.chatbot-body {
+    flex-grow: 1; /* Allows iframe to fill available space */
+    overflow: hidden; /* Ensure iframe fits */
+}
+
+.chatbot-body iframe {
+    display: block; /* Remove potential extra space below iframe */
+}
+
+
+/* --- Responsive Design --- */
+@media (min-width: 768px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section h2 {
+        font-size: 3.5rem;
+    }
+
+    .bike-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    }
+
+    .chatbot-modal {
+        width: 380px; /* Fixed width on desktop */
+        height: 500px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 85%;
+    }
+}
